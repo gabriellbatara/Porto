@@ -1,0 +1,200 @@
+/* src/components/WhyWebsite/WhyWebsite.module.css */
+
+@import "../../vars.css";
+
+.container {
+  background-color: var(--color-overlay-black); /* Latar belakang hitam transparan */
+  padding: 80px 50px;
+  color: var(--color-text-primary); /* Teks default jadi putih */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  display: flex;
+  flex-direction: row; /* Kolom kiri dan kanan berdampingan */
+  justify-content: space-between;
+  align-items: flex-start; /* Sejajarkan ke atas */
+  width: 100%;
+  max-width: 1200px;
+  gap: 50px; /* Jarak antar kolom */
+}
+
+/* --- Kolom Kiri: Teks --- */
+.textColumn {
+  flex: 1; /* Mengambil ruang fleksibel */
+  max-width: 45%; /* Batasi lebar kolom teks */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.subtitle {
+  font-size: 1.1em;
+  color: var(--color-accent-primary); /* Warna aksen untuk sub-judul */
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 20px;
+}
+
+.subtitle::before {
+  content: "•"; /* Bullet point sebagai dekorasi */
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-primary);
+  font-size: 1.5em;
+  line-height: 0.8;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.title {
+  color: var(--color-text-primary);
+  font-size: 2.8em; /* Ukuran judul besar */
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  text-align: left; /* Rata kiri */
+}
+
+.description {
+  font-size: 1em;
+  color: var(--color-text-secondary); /* Warna abu-abu sekunder */
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* --- Kolom Kanan: Benefits Grid --- */
+.benefitsGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid 2 kolom di kanan */
+  gap: 25px; /* Jarak antar kartu benefit */
+  max-width: 55%; /* Batasi lebar grid */
+}
+
+.benefitCard {
+  background-color: var(--color-overlay-black-medium); /* Latar belakang kartu gelap transparan */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(34, 14, 107, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Konten di dalam kartu rata kiri */
+  text-align: left;
+  border: 1px solid rgba(4, 5, 22, 0.397); /* Border halus */
+}
+
+.benefitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(57, 55, 59, 0.25);
+  background-color: var(--color-overlay-black-light);
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: var(--color-background-medium); /* Background untuk ikon (opsional) */
+  border-radius: 50%; /* Untuk ikon dalam lingkaran (opsional) */
+}
+
+.benefitIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: invert(1); /* Jika ikon hitam, ubah jadi putih */
+  /* Sesuaikan filter ini jika ikon Anda berwarna */
+}
+
+.benefitHeading {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.benefitDescription {
+  font-size: 0.85em;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .container {
+    padding: 60px 30px;
+  }
+  .content {
+    flex-direction: column; /* Kolom menumpuk di tablet */
+    gap: 40px;
+    align-items: center;
+  }
+  .textColumn, .benefitsGrid {
+    max-width: 100%; /* Penuhi lebar di mobile */
+  }
+  .title {
+    font-size: 2.2em;
+    text-align: center;
+  }
+  .subtitle {
+    text-align: center;
+    width: 100%;
+  }
+  .subtitle::before {
+    display: none; /* Sembunyikan bullet di mobile */
+  }
+  .description {
+    text-align: center;
+  }
+  .benefitsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 50px 20px;
+  }
+  .title {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+  }
+  .benefitCard {
+    padding: 15px;
+  }
+  .benefitHeading {
+    font-size: 1.1em;
+  }
+  .benefitDescription {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 30px 15px;
+  }
+  .title {
+    font-size: 1.5em;
+  }
+  .benefitsGrid {
+    grid-template-columns: 1fr; /* Satu kolom di ponsel sangat kecil */
+  }
+}

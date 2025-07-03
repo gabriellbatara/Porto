@@ -1,0 +1,42 @@
+ [
+  {
+    "title": "OVO App UI/UX Redesign",
+    "imageSrc": "assets/digital1.jpg",
+    "description": "Studi redesain antarmuka pengguna (UI) dan pengalaman pengguna (UX) untuk aplikasi OVO, dengan fokus pada peningkatan estetika visual, navigasi yang intuitif, dan pengalaman transaksi yang lancar."
+  },
+  {
+    "title": "Thrift Shop Web Design",
+    "imageSrc": "assets/digital2.png",
+    "description": "Perancangan desain website untuk toko pakaian bekas (thrift shop) 'Klassy Collective', menciptakan platform e-commerce yang menarik, mudah digunakan, dan fungsional untuk jual beli barang unik."
+  },
+  {
+    "title": "Job Search Platform Landing Page",
+    "imageSrc": "assets/digital3.png",
+    "description": "Desain halaman beranda untuk platform pencarian kerja 'CariKerja.com', menekankan antarmuka yang ramah pengguna, visual yang menarik, dan proses pencarian pekerjaan yang efisien."
+  },
+  {
+    "title": "Medical Infographic: Temperature Diagnosis",
+    "imageSrc": "assets/digital4.jpg",
+    "description": "Perancangan infografis edukasi tentang 'Peran Suhu Tubuh dalam Diagnosis Infeksi', menggunakan ilustrasi yang jelas dan tata letak yang informatif untuk menyederhanakan konsep medis kompleks."
+  },
+  {
+    "title": "Digital Communication Presentation",
+    "imageSrc": "assets/digital5.jpg",
+    "description": "Pembuatan visual presentasi untuk topik 'Connecting and Communicating', menggunakan ilustrasi dinamis dan tipografi yang kuat untuk menyampaikan pesan interaksi digital secara menarik dan modern."
+  },
+  {
+    "title": "Corporate Event Banner Design",
+    "imageSrc": "assets/digital6.jpg",
+    "description": "Desain visual untuk banner acara 'Gerakan Donasi Sejuta Frame Kacamata Medis', dengan tata letak yang terstruktur untuk menampilkan informasi pembicara, agenda, dan branding organisasi secara efektif."
+  },
+  {
+    "title": "Game Character Profile UI",
+    "imageSrc": "assets/digital7.jpg",
+    "description": "Desain antarmuka pengguna untuk profil karakter game 'LING', menciptakan tampilan visual yang imersif dan menarik, dengan detail informasi karakter dan elemen interaktif."
+  },
+  {
+    "title": "UI/UX Comparison: OVO vs. GoPay",
+    "imageSrc": "assets/digital8.png",
+    "description": "Studi komparatif visual mengenai pengalaman pengguna (UX) dan antarmuka pengguna (UI) antara aplikasi OVO dan GoPay, menyoroti perbedaan desain dan fungsionalitas utama."
+  }
+]

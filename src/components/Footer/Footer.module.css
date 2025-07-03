@@ -1,0 +1,81 @@
+/* src/components/Footer/Footer.module.css */
+
+@import "../../vars.css";
+
+.container {
+  background-color: var(--color-background-dark); /* Latar belakang gelap solid */
+  padding: 40px 20px;
+  color: var(--color-text-secondary); /* Warna teks abu-abu terang */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%; /* Memenuhi lebar penuh */
+  box-sizing: border-box;
+  /* Gaya awal untuk animasi scroll-reveal */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.container.visible { /* State akhir saat terlihat */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.closingStatement {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--color-text-primary); /* Teks penutup lebih cerah */
+  /* Animasi staggered */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.2s;
+}
+
+.container.visible .closingStatement {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.copyright {
+  font-size: 0.9em;
+  color: var(--color-text-tertiary); /* Teks copyright lebih abu-abu */
+  margin: 0;
+  /* Animasi staggered */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.4s;
+}
+
+.container.visible .copyright {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 15px;
+  }
+  .closingStatement {
+    font-size: 1em;
+  }
+  .copyright {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 20px 10px;
+  }
+  .closingStatement {
+    font-size: 0.9em;
+  }
+  .copyright {
+    font-size: 0.75em;
+  }
+}

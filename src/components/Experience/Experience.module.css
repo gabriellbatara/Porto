@@ -1,0 +1,124 @@
+/* src/components/Experience/Experience.module.css */
+
+@import "../../vars.css";
+
+.container {
+  /* Gaya container utama Experience */
+  color: var(--color-text); /* Warna teks dari vars.css */
+  margin-top: 79px; /* Jarak atas dari section sebelumnya */
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 50px 0; /* Tambahkan padding vertikal agar tidak terlalu mepet */
+  box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  text-align: center; /* Pusatkan judul */
+  margin-bottom: 40px; /* Jarak bawah judul */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 100%;
+  max-width: 800px; 
+  margin: 0 auto; 
+}
+
+.history {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.historyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  background: #02040879; 
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; 
+}
+
+.historyItem:hover {
+  transform: translateX(10px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+  background: #0606227e;
+}
+
+
+.historyItemDetails {
+  font-family: var(--font-roboto);
+  width: 100%; 
+}
+
+.historyItemDetails h3 {
+  font-size: 24px; 
+  font-weight: 500;
+  margin-bottom: 5px; 
+}
+
+.historyItemDetails p {
+  font-size: 18px; 
+  font-weight: 300;
+  color: var(--color-text-lighter); 
+}
+
+.historyItemDetails ul {
+  margin-top: 10px;
+  list-style-position: inside; 
+  font-size: 18px; 
+  list-style-type: disc; 
+  margin-left: 0; 
+  padding-left: 20px; 
+  color: var(--color-text-lighter); 
+}
+.historyItemDetails ul li {
+    margin-bottom: 5px; 
+}
+
+
+@media screen and (max-width: 830px) {
+  .container {
+    margin-left: 5%; 
+    margin-right: 5%;
+    padding: 30px 0;
+  }
+  .title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 90%; 
+  }
+  .history {
+    width: 100%;
+    gap: 20px;
+  }
+  .historyItem {
+    padding: 15px;
+  }
+  .historyItemDetails h3 {
+    font-size: 20px;
+  }
+  .historyItemDetails p,
+  .historyItemDetails ul {
+    font-size: 16px;
+  }
+}

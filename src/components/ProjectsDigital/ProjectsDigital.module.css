@@ -1,0 +1,92 @@
+/* src/components/ProjectsDigital/ProjectsDigital.module.css */
+
+@import "../../vars.css";
+
+.container {
+  background-color: var(--color-overlay-black); /* Latar belakang hitam transparan */
+  padding: 80px 20px;
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top dan margin-bottom bisa ditambahkan di App.jsx */
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  color: var(--color-text-primary);
+  font-size: 2.2em;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ini yang mengatur tata letak grid */
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.projectCard {
+  background-color: rgba(26, 26, 58, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: default;
+  border: 1px solid var(--color-border);
+}
+
+.projectCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background-color: rgba(42, 42, 74, 0.8);
+}
+
+.projectImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.projectCard:hover .projectImage {
+    transform: scale(1.05);
+}
+
+.projectTitle {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-text-primary); /* <-- Ganti dari --color-accent-primary menjadi --color-text-primary */
+}
+
+.projectDescription {
+  font-size: 0.9em;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) { /* ... */ }
+@media (max-width: 768px) { /* ... */ }
+@media (max-width: 500px) { /* ... */ }

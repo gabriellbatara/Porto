@@ -1,0 +1,22 @@
+{
+  "logoSrc": "assets/agency.png", 
+  "tagline": "Fokus pada kreativitas dan hasil terbaik untuk setiap proyek Anda. Mari wujudkan ide-ide brilian menjadi visual yang memukau dan berkesan.",
+  "stats": [
+    {
+      "value": "1 TH+",
+      "label": "Pengalaman Saya"
+    },
+    {
+      "value": "30+",
+      "label": "Projek Selesai"
+    },
+    {
+      "value": "20+",
+      "label": "Klien Aktif"
+    },
+    {
+      "value": "60+",
+      "label": "Klien Sangat Puas"
+    }
+  ]
+}

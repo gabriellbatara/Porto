@@ -1,0 +1,194 @@
+/* src/components/FavoriteMusic/FavoriteMusic.module.css */
+
+@import "../../vars.css";
+
+.container {
+  background-color: var(--color-overlay-black);
+  padding: 80px 50px;
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 60vh;
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  color: var(--color-text-primary);
+  font-size: 2.2em;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.albumArtContainer {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Kursor pointer untuk menunjukkan bisa diklik */
+  position: relative; /* Untuk play overlay */
+}
+
+.albumArtContainer:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.albumArt {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Gaya untuk overlay Play/Pause */
+.playOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap transparan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Awalnya tersembunyi */
+  transition: opacity 0.3s ease;
+}
+
+.albumArtContainer:hover .playOverlay {
+  opacity: 1; /* Tampilkan saat hover */
+}
+
+.playIcon, .pauseIcon {
+  font-size: 3em; /* Ukuran ikon play/pause */
+  color: var(--color-accent-primary); /* Warna aksen */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.playIcon {
+    margin-left: 5px; /* Sedikit geser play icon agar terlihat di tengah */
+}
+
+
+.songDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.songTitle {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--color-accent-primary);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.artist {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+/* Gaya untuk Kontrol Pemutar Audio */
+.audioPlayerControls {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Pusatkan tombol */
+  margin-top: 10px; /* Jarak dari teks artis */
+}
+
+.playPauseButton {
+  padding: 12px 30px;
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-primary);
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.playPauseButton:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 30px;
+  }
+  .content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .albumArtContainer {
+    width: 200px;
+    height: 200px;
+  }
+  .songDetails {
+    align-items: center;
+  }
+  .songTitle {
+    font-size: 1.8em;
+  }
+  .artist {
+    font-size: 1.1em;
+  }
+  .audioPlayerControls {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 40px 20px;
+  }
+  .title {
+    font-size: 1.8em;
+  }
+  .albumArtContainer {
+    width: 180px;
+    height: 180px;
+  }
+  .songTitle {
+    font-size: 1.5em;
+  }
+  .artist {
+    font-size: 1em;
+  }
+  .playPauseButton {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+}

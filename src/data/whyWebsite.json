@@ -1,0 +1,27 @@
+{
+  "subtitle": "Solusi Digital",
+  "title": "Mengatasi Tantangan Personal Branding di Era Digital",
+  "description": "Di tengah hiruk pikuk media sosial dan persaingan ketat, membangun dan mempertahankan citra profesional bisa menjadi tantangan. Website personal adalah platform krusial untuk mengatasi keterbatasan tersebut, memberikan Anda kendali penuh atas narasi dan presentasi karya terbaik Anda.",
+  "benefits": [
+    {
+      "iconSrc": "assets/valid.png",
+      "heading": "Kredibilitas Profesional",
+      "description": "Saat ini banyak orang mencari informasi valid dan portofolio profesional melalui platform online."
+    },
+    {
+      "iconSrc": "assets/online.png",
+      "heading": "Selalu Online 24/7",
+      "description": "Portofolio Anda dapat diakses kapan saja, memudahkan klien potensial untuk melihat karya Anda."
+    },
+    {
+      "iconSrc": "assets/global.png",
+      "heading": "Akses Global",
+      "description": "Jangkau audiens dan klien potensial di seluruh dunia, memperluas peluang karir Anda."
+    },
+    {
+      "iconSrc": "assets/update.png",
+      "heading": "Update Mudah",
+      "description": "Website memudahkan Anda untuk memperbarui dan menambahkan karya terbaru secara cepat dan efisien."
+    }
+  ]
+}

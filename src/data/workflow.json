@@ -1,0 +1,25 @@
+ {
+  "title": "Cara Mudah untuk Pesan Jasa Saya",
+  "mainImage": "assets/workflow.png",
+  "quote": "Kreativitas Anda, Visual Saya.",
+  "steps": [
+    {
+      "label": "Pertama",
+      "iconSrc": "assets/friend.png",
+      "heading": "Diskusi & Konsep",
+      "description": "Kita akan berdiskusi mendalam tentang kebutuhan Anda, ide-ide, dan tujuan proyek. Lakukan pembayaran DP 50% untuk memulai."
+    },
+    {
+      "label": "Kedua",
+      "iconSrc": "assets/development.png",
+      "heading": "Pengerjaan & Revisi",
+      "description": "Estimasi pengerjaan adalah 5-7 hari kerja. Anda dapat merevisi hasil secara berkala untuk memastikan sesuai harapan."
+    },
+    {
+      "label": "Ketiga",
+      "iconSrc": "assets/payment.png",
+      "heading": "Pelunasan & Serah Terima",
+      "description": "Setelah revisi final dan Anda puas, lakukan pelunasan pembayaran. Proyek akan segera diserahkan dan siap untuk digunakan."
+    }
+  ]
+}

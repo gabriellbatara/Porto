@@ -1,0 +1,166 @@
+@import "../../vars.css";
+
+.container {
+  background-color: var(--color-overlay); /* <-- Pastikan ini digunakan */
+  padding: 80px 50px;
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+.title {
+  color: var(--color-text);
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+}
+.content {
+  display: block;
+}
+
+.aboutImage {
+  width: 35%;
+}
+
+.aboutItems {
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.aboutItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
+  list-style: none;
+  padding: 25px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(165, 215, 232, 0.42) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-color: var(--color-background-medium);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+}
+
+.aboutItem:hover {
+  background-size: 42% 42%;
+}
+
+.aboutItem h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.aboutItem p {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .aboutImage {
+    display: none;
+  }
+
+  .aboutItems {
+    margin-top: 29px;
+  }
+
+  .aboutItem {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.mainImageContainer {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.mainImageContainer:hover {
+  transform: scale(1.02); /* Sedikit membesar */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7); /* Bayangan lebih gelap dan menyebar */
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* Gaya untuk Daftar Item (Fotografer Profesional, Videografer & Editor, Creative Director) */
+.aboutItems {
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aboutItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--color-background-medium); /* Latar belakang item dengan warna tema */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutItem:hover {
+  transform: translateY(-5px);
+  background-color: var(--color-background-light); /* Latar belakang item saat hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Gaya untuk Lingkaran Ikon */
+.iconContainer {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek hover pada ikon */
+}
+
+.iconContainer:hover {
+  transform: rotate(10deg) scale(1.1); /* Sedikit berputar dan membesar */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}

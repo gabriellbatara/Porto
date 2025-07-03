@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Branding",
+    "iconSrc": "assets/sparkles.png",
+    "downloadLink": "https://www.flaticon.com/free-icon/light-bulb_2984185"
+  },
+  { 
+    "title": "Social Media",
+    "iconSrc": "assets/chart.png",
+    "downloadLink": "https://www.flaticon.com/free-icon/smartphone_3001099"
+  },
+  {
+    "title": "Photo & Video",
+    "iconSrc": "assets/camera.png",
+    "downloadLink": "https://www.flaticon.com/free-icon/video-camera_2984210"
+  },
+  {
+    "title": "Website & Apps",
+    "iconSrc": "assets/computer.png",
+    "downloadLink": "https://www.flaticon.com/free-icon/web-design_3001004"
+  }
+]

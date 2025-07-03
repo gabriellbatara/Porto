@@ -1,0 +1,200 @@
+@import "../../vars.css";
+
+.container {
+  background-color: var(--color-overlay-black); /* Latar belakang hitam transparan */
+  padding: 80px 50px;
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh; /* Sesuaikan tinggi minimum */
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  color: var(--color-text-primary);
+  font-size: 2.5em;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row; /* Konten utama berdampingan (steps & image) */
+  justify-content: space-between;
+  align-items: flex-start; /* Elemen mulai dari atas */
+  width: 100%;
+  max-width: 1200px;
+  gap: 50px; /* Jarak antar kolom */
+}
+
+/* --- Kolom Kiri: Steps Container --- */
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Jarak antar langkah */
+  flex: 1; /* Mengambil ruang fleksibel */
+  max-width: 50%; /* Batasi lebar langkah */
+}
+
+.stepItem {
+  background-color: var(--color-overlay-black-medium);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stepItem:hover {
+  transform: translateX(5px); /* Efek geser kanan saat hover */
+  background-color: var(--color-overlay-black-light);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.stepIcon {
+  width: 40px; /* Ukuran ikon langkah */
+  height: 40px;
+  object-fit: contain;
+  /* filter: invert(1); Jika ikon hitam, ini memutihkannya */
+}
+
+.stepLabel {
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-primary);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.stepHeading {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 10px;
+}
+
+.stepDescription {
+  font-size: 0.9em;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* --- Kolom Kanan: Image & Quote Container --- */
+.imageQuoteContainer {
+  flex: 1; /* Mengambil ruang fleksibel */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  max-width: 50%;
+}
+
+.imageWrapper {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imageWrapper:hover {
+  transform: scale(1.01);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.mainWorkflowImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.quoteBox {
+  background-color: var(--color-background-medium); /* Background untuk quote */
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+  border-left: 5px solid var(--color-accent-primary); /* Garis aksen */
+}
+
+.quoteText {
+  font-size: 1.1em;
+  font-style: italic;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .container {
+    padding: 60px 30px;
+  }
+  .content {
+    flex-direction: column; /* Tumpuk kolom di tablet */
+    gap: 40px;
+    align-items: center;
+  }
+  .stepsContainer, .imageQuoteContainer {
+    max-width: 100%; /* Penuhi lebar di mobile */
+  }
+  .title {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 50px 20px;
+  }
+  .stepItem {
+    padding: 20px;
+  }
+  .stepHeading {
+    font-size: 1.3em;
+  }
+  .stepDescription {
+    font-size: 0.85em;
+  }
+  .quoteText {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 30px 15px;
+  }
+  .title {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+  }
+  .stepIcon {
+    width: 30px;
+    height: 30px;
+  }
+  .stepLabel {
+    padding: 3px 10px;
+    font-size: 0.7em;
+  }
+}

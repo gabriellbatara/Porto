@@ -1,0 +1,15 @@
+@import "./vars.css";
+
+#root, #app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-behavior: smooth; 
+}
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* Tambahkan gaya lain yang Anda inginkan untuk layout umum aplikasi */
+}

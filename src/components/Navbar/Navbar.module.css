@@ -1,0 +1,144 @@
+@import "../../vars.css";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 8%; /* <-- Perbaiki padding ini agar konsisten (sebelumnya ada 20px 80px) */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(45, 52, 107, 0.233); /* <-- Kritis: Tingkatkan opasitas menjadi 0.7 (dari 0.3) */
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Garis bawah lebih halus */
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 1.8em;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: color 0.3s ease;
+}
+
+.title:hover {
+  color: var(--color-accent-primary);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menuBtn {
+  display: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  filter: invert(1);
+  transition: transform 0.2s ease;
+}
+
+.menuBtn:hover {
+    transform: scale(1.1);
+}
+
+.menuItems {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItems a {
+  font-size: 1em;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.menuItems a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: var(--color-accent-primary);
+  transition: width 0.3s ease;
+}
+
+.menuItems a:hover {
+  color: var(--color-accent-primary);
+  transform: translateY(-2px);
+}
+
+.menuItems a:hover::after {
+  width: 100%;
+}
+
+@media screen and (max-width: 830px) {
+  .navbar {
+    padding: 15px 5%;
+  }
+  .menuBtn {
+    display: block;
+  }
+
+  .menuItems {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Latar belakang mobile menu juga ditingkatkan opasitasnya */
+    background: rgba(8, 15, 61, 0.589); /* Hampir solid */
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    display: none;
+    gap: 25px;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+  }
+
+  .menuOpen {
+    display: flex;
+    transform: translateX(0);
+  }
+  .menuItems a {
+      font-size: 1.5em;
+      padding: 10px 0;
+  }
+  .menuItems a::after {
+      height: 3px;
+      bottom: -8px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar {
+    padding: 10px 4%;
+  }
+  .title {
+    font-size: 1.5em;
+  }
+  .menuBtn {
+    width: 30px;
+    height: 30px;
+  }
+  .menuItems a {
+    font-size: 0.9em;
+    margin: 0 5px;
+  }
+}

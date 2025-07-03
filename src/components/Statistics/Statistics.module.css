@@ -1,0 +1,115 @@
+@import "../../vars.css";
+
+.container {
+  background-color: var(--color-overlay-black); /* Latar belakang hitam transparan */
+  padding: 80px 20px;
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top dan margin-bottom bisa ditambahkan di App.jsx */
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Pseudo-element untuk background gelombang biru di bagian bawah */
+.container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, var(--color-accent-blue), var(--color-accent-cyan));
+    z-index: 0;
+    clip-path: ellipse(80% 50% at 50% 100%);
+    opacity: 0.6;
+}
+
+.topContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.agencyLogo {
+  width: 100px; /* <--- Sesuaikan ukuran logo agar lebih proporsional */
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+  /* Kritis: Gunakan filter invert jika ikon Anda aslinya BERWARNA atau HITAM.
+             Jika ikon Anda sudah PUTIH dengan background transparan, HAPUS filter ini. */
+  filter: invert(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); /* <--- Ini membuat ikon hitam jadi putih, atau berwarna jadi negatif */
+  transition: transform 0.3s ease; /* Tambah transisi untuk efek hover */
+}
+
+.agencyLogo:hover {
+    transform: scale(1.1); /* Sedikit membesar saat hover */
+}
+
+.tagline {
+  font-size: 1.2em;
+  color: var(--color-text-primary); /* Pastikan teks tagline putih */
+  line-height: 1.6;
+  margin: 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: center;
+  z-index: 1;
+  background-color: var(--color-background-medium);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--color-border);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px 10px;
+  background-color: var(--color-overlay-black-medium);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-overlay-black-light);
+}
+
+.statValue {
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--color-accent-primary); /* Angka tetap merah aksen */
+  margin-bottom: 5px;
+}
+
+.statLabel {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: var(--color-text-secondary); /* Label statistik abu-abu sekunder */
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) { /* ... */ }
+@media (max-width: 768px) { /* ... */ }
+@media (max-width: 500px) { /* ... */ }

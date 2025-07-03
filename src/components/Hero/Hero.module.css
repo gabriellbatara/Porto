@@ -1,0 +1,208 @@
+@import "../../vars.css";
+.heroSection {
+  background: linear-gradient(
+    to right,
+    rgba(10, 14, 46, 0.5),
+    rgba(10, 14, 46, 0.5)
+  );
+  backdrop-filter: blur(6px); /* Tambahan agar transparansi lebih halus */
+}
+.container {
+  padding-top: 120px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 49px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-text);
+  z-index: 1;
+}
+
+.title {
+  font-size: 72px;
+  font-weight: 900;
+  margin-bottom: 33px;
+  font-family: var(--font-roboto);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 0) 120%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.description {
+  font-size: 30px;
+  font-family: var(--font-roboto);
+  margin-bottom: 52px;
+}
+
+.contactBtn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ffffff; /* putih atau sesuaikan */
+  color: #0a0a23; /* warna gelap agar kontras */
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contactBtn:hover {
+  background-color: #0a0a23;
+  color: #ffffff;
+}
+
+.heroImg {
+  width: 50%;
+  z-index: 1;
+
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.topBlur {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  min-width: 350px;
+  min-width: 350px;
+  top: -128px;
+  left: -10vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.bottomBlur {
+  position: absolute;
+  width: 70vw;
+  height: 50vw;
+  min-width: 350px;
+  min-width: 250px;
+  top: 246px;
+  right: -25vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    align-items: center;
+  }
+}
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Transisi untuk semua properti yang berubah saat hover */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan awal */
+}
+
+.primary {
+  background-color: #e44d26;
+  color: white;
+}
+
+.primary:hover {
+  background-color: #c23b1c;
+  transform: translateY(-3px); /* Sedikit naik saat hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Bayangan lebih dalam saat hover */
+}
+
+.secondary {
+  background-color: transparent;
+  color: #555;
+  border: 2px solid #ccc;
+}
+
+.secondary:hover {
+  border-color: #e44d26;
+  color: #e44d26;
+  transform: translateY(-3px); /* Sedikit naik saat hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Bayangan lebih dalam saat hover */
+}
+
+.arrow {
+  font-size: 1.2em;
+}
+
+/* ... (Main Bike Image tetap sama) ... */
+
+/* Sidebar Images */
+.sidebarImages {
+  grid-column: 1;
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-left: 50px;
+  gap: 20px;
+  z-index: 5;
+}
+
+.imageBox {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Tambah transisi box-shadow */
+}
+
+.imageBox:hover {
+  transform: translateY(-5px) scale(1.05); /* Sedikit naik dan membesar */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Bayangan lebih dalam */
+}

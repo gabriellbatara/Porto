@@ -1,0 +1,25 @@
+[
+  {
+    "role": "Photographer & VideoGrapher",
+    "startDate": "September, 2023",
+    "endDate": "Sekarang",
+    "experiences": ["Menangani lebih dari 50 pemotretan potret & video", "Membuat konten feed"]
+  },
+  { 
+    "role": "Videographer, Kreatif Visual Studio",
+    "startDate": "April, 2024",
+    "endDate": "Sekarang",
+    "experiences": ["Menyusun storyboard, shooting, dan editing untuk 20+",
+      "Meningkatkan engagement konten klien hingga 300%"]
+  },
+  {
+    "role": "Web Development Specialist",
+    "startDate": "April, 2024",
+    "endDate": "Sekarang",
+    "experiences": [
+    "Merancang dan mengembangkan website responsif dari wireframe hingga implementasi",
+    "Mengoptimalkan performa dan pengalaman pengguna (UX) untuk berbagai platform",
+    "Mengintegrasikan fitur-fitur dinamis dan sistem manajemen konten (CMS) sesuai kebutuhan klien"
+    ]
+  }
+]

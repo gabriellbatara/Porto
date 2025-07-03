@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Educational Talkshow Documentation",
+    "imageSrc": "assets/project1.jpeg",
+    "description": "Mengabadikan momen penting dari sebuah talkshow edukasi, menangkap interaksi pembicara dan suasana forum diskusi yang informatif dan inspiratif."
+  },
+  {
+    "title": "Wedding Ceremony Captures",
+    "imageSrc": "assets/project2.jpeg",
+    "description": "Dokumentasi eksklusif upacara pernikahan, menangkap keindahan momen sakral, ekspresi kebahagiaan, dan detail setiap tradisi dengan sentuhan artistik."
+  },
+  {
+    "title": "Vibrant Event Photography",
+    "imageSrc": "assets/project3.jpeg",
+    "description": "Memotret energi dan antusiasme sebuah event malam, fokus pada ekspresi kegembiraan, interaksi keramaian, dan atmosfer dinamis dengan pencahayaan yang menawan."
+  },
+  {
+    "title": "Academic Group Documentation",
+    "imageSrc": "assets/project4.jpg",
+    "description": "Mengabadikan semangat kebersamaan dan dinamika tim dalam kegiatan akademik atau pelatihan. Fokus pada interaksi, identitas kelompok, dan suasana kolaboratif."
+  },
+  {
+    "title": "Cultural Excursion Documentation",
+    "imageSrc": "assets/project5.jpg",
+    "description": "Dokumentasi perjalanan edukasi ke situs bersejarah, menangkap momen eksplorasi budaya, pembelajaran, dan interaksi peserta dengan lingkungan baru."
+  },
+  {
+    "title": "Social Gathering Highlights",
+    "imageSrc": "assets/project6.jpg",
+    "description": "Menangkap esensi kegembiraan dan kehangatan dalam acara kumpul-kumpul sosial. Fokus pada ekspresi natural, tawa, dan momen-momen spontan yang tak terlupakan."
+  },
+  {
+    "title": "Event Hosting & Presentation",
+    "imageSrc": "assets/project8.jpeg",
+    "description": "Dokumentasi acara yang menampilkan pembawa acara (MC) atau presenter, menyoroti dinamika panggung, interaksi dengan audiens, dan fokus pada penyampaian pesan yang efektif dan menarik."
+  },
+  {
+    "title": "Trendy Studio Group Portraits",
+    "imageSrc": "assets/project8.jpg",
+    "description": "Seri potret grup di studio dengan latar belakang cerah dan gaya kasual, menangkap ekspresi personal, kebersamaan, dan dinamika unik dari setiap individu dalam bingkai."
+  }
+]

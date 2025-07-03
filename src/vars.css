@@ -1,0 +1,44 @@
+/* src/vars.css */
+
+:root {
+  /* Warna Dasar */
+  --color-background-dark: #000000; /* Paling gelap untuk latar belakang utama */
+  --color-background-medium: #1A1A3A; /* Untuk kartu, item, atau area yang lebih menonjol dari dark */
+  --color-background-light: #2A2A4A; /* Untuk hover atau elemen yang lebih terang dari medium */
+  --color-border: #4A4A6A; /* Border atau pemisah halus */
+  --color-overlay: rgba(10, 14, 46, 0.5); /* Overlay untuk area konten agar lebih terbaca di atas video */
+
+  /* Warna Teks */
+  --color-text-primary: #F0F0F0; /* Teks utama (putih cerah) */
+  --color-text-secondary: #CCCCCC; /* Teks sekunder (abu-abu terang) */
+  --color-text-tertiary: #AAAAAA; /* Teks keterangan (lebih abu-abu) */
+
+  /* Warna Aksen (Merah) */
+  --color-accent-primary: #E44D26; /* Merah cerah */
+  --color-accent-hover: #C23B1C; /* Merah lebih gelap saat hover */
+
+  /* Font Family */
+  --font-primary: 'Montserrat', sans-serif;
+}/* src/vars.css */
+
+:root {
+  /* Warna Dasar */
+  --color-background-dark: #4d4d66d0; /* Hitam polos untuk background utama */
+  --color-background-medium: #08091d; /* Sangat gelap, sedikit kebiruan/keunguan untuk kartu/item */
+  --color-background-light: #2A2B3C; /* Agak lebih terang dari medium, untuk hover */
+  --color-border: #3A3B4C; /* Border halus, menyatu dengan background */
+  --color-overlay-black: var(--color-background-dark); /* Menggunakan background solid */
+  --color-overlay-black-medium: var(--color-background-medium); /* Menggunakan background solid */
+  --color-overlay-black-light: var(--color-background-light); /* Menggunakan background solid */
+  /* Warna Teks */
+  --color-text-primary: #F0F0F0; /* Teks utama (putih cerah) */
+  --color-text-secondary: #CCCCCC; /* Teks sekunder (abu-abu terang) */
+  --color-text-tertiary: #AAAAAA; /* Teks keterangan (lebih abu-abu) */
+
+  /* Warna Aksen (Merah) */
+  --color-accent-primary: #E44D26; /* Merah cerah */
+  --color-accent-hover: #C23B1C; /* Merah lebih gelap saat hover */
+
+  /* Font Family */
+  --font-primary: 'Montserrat', sans-serif;
+}
